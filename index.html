@@ -18,7 +18,7 @@ body{ background-color: black; min-height: 100vh; display: flex; flex-direction:
 <body>
 <div class="content">
     <img id="imgAlert" src="./image/alert.gif"><br>
-    <button id="reslove">Click here to Reslove</button><br>
+    <button id="reslove">Click here to Resolve</button><br>
     <h1 id="dhina" style="display:none; font-family: monospace;">Dhinakar only can save u!</h1>
 </div>
 <audio controls autoplay id="alert">
@@ -28,13 +28,14 @@ body{ background-color: black; min-height: 100vh; display: flex; flex-direction:
   
 
 <script>
-
+document.onload = function vibe() { window.navigator.vibrate([300,200,300]);}
 document.getElementById("reslove").onclick = function(){
     alert("Dear Manikandan press Okay to save your Device!");
     document.getElementById("imgAlert").src ="./image/virus-alert-downloading-virus.gif";
     document.getElementById("reslove").style.display = "none";
     var audio = document.getElementById("alert");
     audio.muted = true;
+    window.navigator.vibrate(0);
 }
 document.getElementById("imgAlert").onclick = function hack()
 {
